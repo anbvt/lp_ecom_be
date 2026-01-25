@@ -30,8 +30,7 @@ public class Brand {
 
 	private String logo;
 	
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "brand")
+    @OneToMany(mappedBy = "brand", fetch = FetchType.LAZY)
     @JsonIgnore
-    @Column(insertable = false, updatable = false)
-    private List<Product> ListSanPham;
+    private List<Product> listSanPham;
 }
